@@ -1,5 +1,8 @@
 const PLACEHOLDER = "employeesPlaceholder";
 
+import { getEmployees, removeEmployee, addEmployee,
+  findById, searchEmployees, setEmployeeManager} from './service'
+
 function clearEmployeesPlaceholder() {
 
   document.getElementById(PLACEHOLDER).innerHTML = '';
