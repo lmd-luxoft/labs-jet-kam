@@ -9,7 +9,7 @@ function clearEmployeesPlaceholder() {
 
 }
 
-function showEmployees(employees) {
+export function showEmployees(employees) {
   clearEmployeesPlaceholder();
   const ul = document.createElement("ul");
 
@@ -69,7 +69,7 @@ function showEmployees(employees) {
    showEmployees(DATA.employees); 
    } */
 
-function addEmployeeUI() {
+   export function addEmployeeUI() {
   let errorHTML = "";
 
   const name = document.getElementById("name").value;
@@ -97,7 +97,7 @@ function addEmployeeUI() {
   document.getElementById("surname").value = "";
 }
 
-function runUI() {
+export function runUI() {
   showEmployees(DATA.employees);
   fillSelect(document.getElementById("managerSelect"),
     getEmployeesOptions());
@@ -108,7 +108,7 @@ function runUI() {
   assignSendOnEnter("addPane", "addEmployeeButton");
 }
 
-function fillSelect(select, values, selectedValue) {
+export function fillSelect(select, values, selectedValue) {
   for (let val of values) {
     const option = document.createElement("option");
     option.text = val.text;
@@ -118,7 +118,7 @@ function fillSelect(select, values, selectedValue) {
   }
 }
 
-function getEmployeesOptions() {
+export function getEmployeesOptions() {
   let options = [];
   for (let e of DATA.employees) {
     options.push({ text: e.name + ' ' + e.surname, value: e.id });
@@ -126,7 +126,7 @@ function getEmployeesOptions() {
   return options;
 }
 
-function searchEmployeeUI() { 
+export function searchEmployeeUI() { 
   const name = document.getElementById("nameSearch").value; 
   const surname = document.getElementById("surnameSearch").value; 
   const managerRef = document.getElementById("managerSearch").value; 
@@ -140,7 +140,7 @@ function searchEmployeeUI() {
 * @param evt событие, вызывающее активацию 
 * @param id идентификатор таба 
 */
-function openTab(evt, id) {
+export function openTab(evt, id) {
   // Определяем переменные 
   var i, tabcontent, tablinks;
 
@@ -162,7 +162,7 @@ function openTab(evt, id) {
   evt.currentTarget.className += " active";
 }
 
-function assignSendOnEnter(paneId, buttonId) {
+export function assignSendOnEnter(paneId, buttonId) {
   let allInput = document.querySelectorAll("#" + paneId + " input");
   for (let input of allInput) {
     input.addEventListener("keyup", function (event) {
