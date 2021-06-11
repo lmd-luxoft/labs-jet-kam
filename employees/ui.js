@@ -1,7 +1,7 @@
 const PLACEHOLDER = "employeesPlaceholder";
 
 import { getEmployees, removeEmployee, addEmployee,
-  findById, searchEmployees, setEmployeeManager} from './service'
+  findById, searchEmployees, setEmployeeManager, showEmployees} from './service'
 
 function clearEmployeesPlaceholder() {
 
@@ -108,7 +108,7 @@ export function runUI() {
   assignSendOnEnter("addPane", "addEmployeeButton");
 }
 
-export function fillSelect(select, values, selectedValue) {
+function fillSelect(select, values, selectedValue) {
   for (let val of values) {
     const option = document.createElement("option");
     option.text = val.text;
