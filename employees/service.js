@@ -122,14 +122,7 @@ export function getEmployeeJSON(id) {
   const e = findById(id);
   return JSON.stringify(e);
 }
-export function removeEmployee(id) {
-  let index = 0;
-  for (let e of DATA.employees) {
-    if (e.id === id) break;
-    index++;
-  }
-  DATA.employees.splice(index, 1);
-}
+
 export function removeEmployeeUI(id) {
   removeEmployee(id);
   showEmployees(DATA.employees);
