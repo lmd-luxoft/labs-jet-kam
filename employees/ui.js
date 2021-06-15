@@ -1,7 +1,7 @@
 const PLACEHOLDER = "employeesPlaceholder";
 
 import { getEmployees, removeEmployee, addEmployee,
-  findById, searchEmployees, setEmployeeManager, showEmployees} from './service'
+  findById, searchEmployees, setEmployeeManager} from './service'
 
 function clearEmployeesPlaceholder() {
 
